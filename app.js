@@ -24,8 +24,9 @@ app.post('/signup',async(req,res)=>{
                    res.send({message:'Seems like you already have an account with this email address'})
         }else{
           const data =new User({
-            name:req.body.name,
+            Name:req.body.Name,
             email:req.body.email,
+            mobile_Number:req.body.mobile_Number,
             password:req.body.password
           })
          data.save(()=>{
